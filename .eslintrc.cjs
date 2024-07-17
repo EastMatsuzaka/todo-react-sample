@@ -8,6 +8,7 @@ module.exports = {
     'plugin:react/jsx-runtime',
     'plugin:react-hooks/recommended',
     'prettier',
+    'plugin:storybook/recommended',
   ],
   ignorePatterns: [
     'dist',
@@ -24,6 +25,17 @@ module.exports = {
     ],
     '@typescript-eslint/naming-convention': [
       'error',
+      {
+        selector: 'variable',
+        types: ['function'],
+        modifiers: ['const'],
+        format: ['camelCase', 'PascalCase'],
+      },
+      {
+        selector: 'variable',
+        modifiers: ['export'],
+        format: ['camelCase', 'PascalCase'],
+      },
       {
         selector: 'variable',
         format: ['camelCase'],

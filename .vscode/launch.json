@@ -7,6 +7,13 @@
       "name": "localhost に対して Chrome を起動する",
       "url": "http://localhost:5173/",
       "webRoot": "${workspaceFolder}"
+    },
+    {
+      "type": "chrome",
+      "request": "launch",
+      "name": "storybook に対して Chrome を起動する",
+      "url": "http://localhost:6006/",
+      "webRoot": "${workspaceFolder}"
     }
   ]
 }
