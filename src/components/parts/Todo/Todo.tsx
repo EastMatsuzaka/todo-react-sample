@@ -6,20 +6,20 @@ interface TodoProps {
   /** タスクが完了しているかどうか */
   completed: boolean;
   /**
-   * タスククリックイベント
+   * タスクチェンジイベント
    * @param checked - タスクが完了しているかどうか
    */
-  onClick?: (checked: boolean) => void;
+  onChange: (checked: boolean) => void;
 }
 
 /**
  * タスクを表示するコンポーネント
  */
-export function Todo({ label, completed, onClick }: TodoProps) {
+export function Todo({ label, completed, onChange }: TodoProps) {
   return (
     <Checkbox
       checked={completed}
-      onClick={onClick && ((event) => onClick(event.currentTarget.checked))}
+      onChange={(event) => onChange(event.currentTarget.checked)}
       label={<Text td={completed ? 'line-through' : undefined}>{label}</Text>}
     />
   );

@@ -17,7 +17,7 @@ export const Uncompleted: Story = {
   args: {
     completed: false,
     label: 'Todo Task',
-    onClick: action('onClick'),
+    onChange: action('onClick'),
   },
 };
 
@@ -25,7 +25,7 @@ export const Completed: Story = {
   args: {
     completed: true,
     label: 'Todo Task',
-    onClick: action('onClick'),
+    onChange: action('onClick'),
   },
 };
 
@@ -34,5 +34,6 @@ export const LongTaskLabel: Story = {
     completed: false,
     label:
       '長いタスク長いタスク長いタスク長いタスク長いタスク長いタスク長いタスク長いタスク',
+    onChange: action('onClick'),
   },
 };
