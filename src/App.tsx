@@ -1,11 +1,12 @@
 import '@mantine/core/styles.css';
-import { Button, MantineProvider } from '@mantine/core';
+import { MantineProvider } from '@mantine/core';
 import { theme } from './theme';
+import { Layout } from './components/Layout';
 
 function App() {
   return (
     <MantineProvider theme={theme}>
-      <Button>ボタン</Button>
+      <Layout />
     </MantineProvider>
   );
 }
