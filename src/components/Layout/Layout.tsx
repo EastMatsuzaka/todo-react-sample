@@ -2,7 +2,7 @@ import { AppShell, Burger, Group } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
 import { Logo } from '../parts/Logo';
 import { Navbar } from '../parts/Navbar';
-import { TodoPage } from '../pages/TodoPage';
+import { Outlet } from 'react-router-dom';
 
 export function Layout() {
   const [opened, { toggle }] = useDisclosure();
@@ -36,7 +36,7 @@ export function Layout() {
       </AppShell.Navbar>
 
       <AppShell.Main>
-        <TodoPage />
+        <Outlet />
       </AppShell.Main>
     </AppShell>
   );

@@ -1,11 +1,11 @@
-import { Stack, Text } from '@mantine/core';
+import { Stack } from '@mantine/core';
+import { NavLink } from 'react-router-dom';
 
 export function Navbar() {
   return (
     <Stack>
-      <Text>Navbar</Text>
-      <Text>Navbar</Text>
-      <Text>Navbar</Text>
+      <NavLink to="/">Todo</NavLink>
+      <NavLink to="/about">About</NavLink>
     </Stack>
   );
 }
