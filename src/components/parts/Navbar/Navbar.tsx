@@ -6,6 +6,7 @@ export function Navbar() {
     <Stack>
       <NavLink to="/">Todo</NavLink>
       <NavLink to="/about">About</NavLink>
+      <NavLink to="/async-todo">API Request Todo</NavLink>
     </Stack>
   );
 }

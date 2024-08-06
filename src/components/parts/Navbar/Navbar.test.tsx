@@ -10,7 +10,10 @@ describe('Navbar', () => {
       </MemoryRouter>,
     );
 
-    expect(screen.getByRole('link', { name: /todo/i })).toBeInTheDocument();
-    expect(screen.getByRole('link', { name: /about/i })).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: 'Todo' })).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: 'About' })).toBeInTheDocument();
+    expect(
+      screen.getByRole('link', { name: 'API Request Todo' }),
+    ).toBeInTheDocument();
   });
 });

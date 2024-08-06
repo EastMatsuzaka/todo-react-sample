@@ -27,6 +27,19 @@ describe('routesConfig', () => {
     expect(screen.getByText('AboutPage')).toBeInTheDocument();
   });
 
+  test('/async-todo で AsyncTodoPage が表示される', () => {
+    vi.mock('./components/pages/AsyncTodoPage', () => ({
+      AsyncTodoPage: vi.fn().mockReturnValue(<div>AsyncTodoPage</div>),
+    }));
+
+    const router = createMemoryRouter(routesConfig, {
+      initialEntries: ['/async-todo'],
+    });
+    render(<RouterProvider router={router} />);
+
+    expect(screen.getByText('AsyncTodoPage')).toBeInTheDocument();
+  });
+
   test('存在しないパスで RouteErrorPage が表示される', () => {
     vi.mock('./components/pages/RouteErrorPage', () => ({
       RouteErrorPage: vi.fn().mockReturnValue(<div>RouteErrorPage</div>),

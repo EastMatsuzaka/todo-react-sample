@@ -29,6 +29,7 @@ export default defineConfig({
         'src/main.tsx',
         'src/theme.ts',
         'src/vite-env.d.ts',
+        'src/mocks/**/*',
       ],
     },
   },

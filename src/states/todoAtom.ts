@@ -1,4 +1,5 @@
 import { atom } from 'jotai';
+import { getTodoList } from '@/service/todoService';
 
 export interface TodoItem {
   title: string;
@@ -6,3 +7,4 @@ export interface TodoItem {
 }
 
 export const todoListAtom = atom<TodoItem[]>([]);
+export const todoListAsyncAtom = atom(() => getTodoList());
